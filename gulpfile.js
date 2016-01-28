@@ -60,9 +60,9 @@ gulp.task('release-note', function(done) {
   var notes = '';
   var parse = through.obj(function(file, enc, callback) {
     var text = file.contents.toString(enc);
-    var matches = text.match(/###[\s\S]*\n\n/);
-    if (matches) {
-      notes = matches[0].trim();
+    var matches = text.split(/\n\n/);
+    if (matches[1]) {
+      notes = matches[1].trim();
     }
     this.push(file);
     return callback();
