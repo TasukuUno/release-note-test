@@ -19,6 +19,9 @@
   "devDependencies": {
     "github-changes": "^1.0.1",
     "gulp": "3.9.0",
-    "run-sequence": "1.1.5"
+    "gulp-github-release": "^1.1.1",
+    "gulp-shell": "^0.5.2",
+    "run-sequence": "1.1.5",
+    "through2": "^2.0.0"
   }
 }
