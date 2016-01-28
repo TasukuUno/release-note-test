@@ -10,6 +10,7 @@ var owner = 'TasukuUno';
 var repo = 'release-note-test';
 var branch = 'master';
 var file = './changelog.md';
+var uploadAssets = './src/upload.txt';
 var token = process.env.GITHUB_TOKEN;
 
 // YYYYMMDD_HHmmss as tag name
@@ -72,7 +73,7 @@ gulp.task('release-note', function(done) {
     .on('end', function() {
       console.log('\n' + notes + '\n');
 
-      gulp.src(file)
+      gulp.src(uploadAssets)
         .pipe(githubRelease({
           token: token,           // or you can set an env var called GITHUB_TOKEN instead
           owner: owner,           // if missing, it will be extracted from manifest (the repository.url field)
