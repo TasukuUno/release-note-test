@@ -6,6 +6,5 @@ release生成とタグ打ちをgulpから実行できるか試す。
 ## how to
 
 ```
-GITHUB_TOKEN=aaa____your_gitub_token____aaaaaa gulp publish
+GITHUB_TOKEN=<your github token> gulp publish
 ```
-
