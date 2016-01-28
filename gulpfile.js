@@ -35,7 +35,11 @@ gulp.task('publish', function(done) {
   runSequence('changelog', 'release-note', done);
 });
 
-// generate changelog file
+////////////////////////////////////////////////////////
+//
+//  generate changelog file
+//
+////////////////////////////////////////////////////////
 gulp.task('changelog', function() {
   return gulp.src('')
     .pipe(shell([
