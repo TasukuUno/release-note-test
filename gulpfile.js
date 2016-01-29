@@ -85,7 +85,7 @@ gulp.task('release-note', function(done) {
           tag: tag,               // if missing, the version will be extracted from manifest and prepended by a 'v'
           name: 'release ' + tag, // if missing, it will be the same as the tag
           notes: notes,           // if missing it will be left undefined
-          draft: false,           // if missing it's false
+          draft: true,            // if missing it's false
           prerelease: false       // if missing it's false
           //, manifest: require('./package.json') // package.json from which default values will be extracted if they're missing
         }))
